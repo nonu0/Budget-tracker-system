@@ -1,0 +1,72 @@
+{% load static %}
+{% include 'partials/_sidebar.html' %}
+<!-- Template Stylesheet -->
+<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+<!-- Favicon -->
+<link href="{% static 'img/favicon.icon' %}" rel="icon">
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+    rel="stylesheet">
+
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Libraries Stylesheet -->
+<link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+<link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+
+<!-- Customized Bootstrap Stylesheet -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+{% block content %}
+<section class="home-container">
+    <div class="user-summary">
+        <div class="user-card">
+            <h1>Welcome Guest</h1>
+            <h1>What do you do?</h1>
+            <img src="{% static 'img/user.jpg'%}" class="user-img-guest" alt="">
+            <h3>User status is False</h3>
+        </div>
+        <div class="expense-cards">
+            <a href="">
+                <div class="income-card">
+                    <h1>Monthly Income</h1>
+                    <h2>ksh.0</h2>
+                    <img src="" alt="">
+                    <p>User status is False!</p>
+            </a>
+        </div>
+        <a href="">
+            <div class="debt-card">
+                <h1>Monthly Debt</h1>
+                <h2>ksh.0</h2>
+                <img src="" alt="">
+                <p>User status is False!</p>
+        </a>
+    </div>
+    <a href="">
+        <div class="expense-card">
+            <h1>Monthly Expenses</h1>
+            <h2>ksh.0</h2>
+            <img src="" alt="">
+            <p>User status is False!</p>
+    </a></div>
+
+    </div>
+    </div>
+    <div class="summary-calendar">
+        <div class="summary-graph">
+            <img src="{% static 'images/test.jpg' %}" class="graph" alt="">
+        </div>
+        <div class="calendar-card">
+            <img src="{% static 'images/test.jpg' %}" class="calendar" alt="">
+        </div>
+    </div>
+</section>
+{% endblock %}

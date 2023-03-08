@@ -1,0 +1,11 @@
+{% load static %}
+{% autoescape off %}
+
+
+    Hi {{User.name}}
+
+    Please use the link below to verify your account.
+
+    http://{{domain}}{% url 'authentication:activate' uidb64=uid token=token %}
+
+{% endautoescape %}

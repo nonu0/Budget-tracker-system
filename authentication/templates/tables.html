@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Table Start -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h6 class="mb-4">My Medical Expense Table</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Source</th>
+                                <th>Planned Amount</th>
+                                <th>Actual Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for medical in medical_cat %}
+                            <tr>
+                                <td>{{medical.date_added}}</td>
+                                <td>{{medical.name_of_expense}}</td>
+                                <td>ksh.{{medical.planned_amount}}</td>
+                                <td>ksh.{{medical.planned_amount}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h6 class="mb-4">My House hold expenses Tables</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Expense</th>
+                                <th>Planned Amount</th>
+                                <th>Actual Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for house in household_cat %}
+                            <tr>
+                                <td>{{house.date_added}}</td>
+                                <td>{{house.name_of_expense}}</td>
+                                <td>ksh.{{house.planned_amount}}</td>
+                                <td>ksh.{{house.planned_amount}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h6 class="mb-4">My Food Expenses Table</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Expense</th>
+                                <th>Planned Amount</th>
+                                <th>Actual Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for food in food_cat %}
+                            <tr>
+                                <td>{{food.date_added}}</td>
+                                <td>{{food.source}}</td>
+                                <td>ksh.{{food.planned_amount}}</td>
+                                <td>ksh.{{food.planned_amount}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h6 class="mb-4">My Transportation Expenses Table</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Expense</th>
+                                <th>Planned Amount</th>
+                                <th>Actual Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for transportation in transportation_cat %}
+                            <tr>
+                                <td>{{transportation.date_added}}</td>
+                                <td>{{transportation.source}}</td>
+                                <td>ksh.{{transportation.planned_amount}}</td>
+                                <td>ksh.{{transportation.planned_amount}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+                <div class="col-sm-12 col-xl-6">
+                    <div class="bg-secondary rounded h-100 p-4">
+                        <h6 class="mb-4">My Personal Expenses Table</h6>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Expense</th>
+                                    <th>Planned Amount</th>
+                                    <th>Actual Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for personal in personal_cat %}
+                                <tr>
+                                    <td>{{personal.date_added}}</td>
+                                    <td>{{personal.name_of_expense}}</td>
+                                    <td>ksh.{{personal.planned_amount}}</td>
+                                    <td>ksh.{{personal.planned_amount}}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h6 class="mb-4">My Subscriptions Expenses Table</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Expense</th>
+                                <th>Planned Amount</th>
+                                <th>Actual Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for subscriptions in subscriptions_cat %}
+                            <tr>
+                                <td>{{subscriptions.date_added}}</td>
+                                <td>{{subscriptions.name_of_expense}}</td>
+                                <td>ksh.{{subscriptions.planned_amount}}</td>
+                                <td>ksh.{{subscriptions.planned_amount}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h6 class="mb-4">My Savings Table</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Expense</th>
+                                <th>Planned Amount</th>
+                                <th>Actual Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for savings in savings_cat %}
+                            <tr>
+                                <td>{{savings.date_added}}</td>
+                                <td>{{savings.name_of_expense}}</td>
+                                <td>ksh.{{savings.planned_amount}}</td>
+                                <td>ksh.{{savings.planned_amount}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h6 class="mb-4">Total Income Table</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Expense</th>
+                                <th>Planned Amount</th>
+                                <th>Actual Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for income in model_objs %}
+                            <tr>
+                                <td>{{income.date}}</td>
+                                <td>{{income.source}}</td>
+                                <td>ksh.{{income.planned_amount}}</td>
+                                <td>ksh.{{income.planned_amount}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Table End -->
+
+{% endblock %}

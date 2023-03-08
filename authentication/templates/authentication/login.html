@@ -1,0 +1,28 @@
+{% load static %}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+
+{% block content%}
+<section class="container-all-login">
+    <div class="log-head">
+        <h2 class='register-head'>Login Here</h2>
+    </div>
+
+    <div class="form-reg">
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class="login-btn">Sign In</button>
+        </form>
+
+        {% if error %}
+        <li style="color:red">{{error}}</li>
+        {% endif %}
+        <p>Don't have an account?...</p><a
+            href="{% url 'authentication:register' %}{% if request.GET.next %}?next={{request.GET.next}}{% endif %}">Register
+            Here.</a>
+    </div>
+</section>
+
+{% endblock content %}
