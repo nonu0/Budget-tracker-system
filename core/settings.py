@@ -15,7 +15,8 @@ SECRET_KEY = 'django-insecure-akpda2us%0^5%+y=rshi6la=lxzwp=4xq8b8fc^z3r-4z8izc%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','budget-tracker-system-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://fflic-budgeting-system-production.up.railway.app']
 
 
 # Application definition
@@ -34,6 +35,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
