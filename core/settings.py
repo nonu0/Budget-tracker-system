@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'authentication',
     'budget',
 ]
@@ -68,7 +69,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'Budget',
+       'NAME': 'bgt_db',
        'USER': 'postgres',
        'PASSWORD': 'cliffnonu2',
        'HOST': 'ecommerce-db.ckmndpzffjgc.ap-south-1.rds.amazonaws.com',
@@ -107,10 +108,10 @@ USE_I18N = True
 
 USE_TZ = True
 #email config 
-EMAIL_FROM_USER = 'confirmatione34@gmail.com'
+EMAIL_FROM_USER = 'emailconfirmation270@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'confirmatione34@gmail.com'
-EMAIL_HOST_PASSWORD = 'ibpgbgfxotjuncqn'
+EMAIL_HOST_USER = 'emailconfirmation270@gmail.com'
+EMAIL_HOST_PASSWORD = 'pblfyjvzphrcalvo'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 

@@ -28,7 +28,7 @@ class FetchData(object):
     def get_context_data(self, **kwargs):
         context =  super().get_context_data(**kwargs)
         owner = self.request.user
-        model_objs = self.model.objects.using('budget').filter(owner=owner)
+        model_objs = self.model.objects.filter(owner=owner)
         context['model_objs'] = model_objs
         return context
 
